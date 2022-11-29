@@ -4,6 +4,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {InjectManifest} = require('workbox-webpack-plugin');
 
+
 module.exports = () => {
   return {
     mode: 'development',
