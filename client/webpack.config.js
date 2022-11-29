@@ -24,29 +24,23 @@ module.exports = () => {
         template: './index.html',
         title: 'Cards'
       }),
-      // Creates a manifest.json file.
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
-        start_url: './',
+        // TODO: Create a manifest.json:
+        name: 'wtf',
+        short_name: 'MyPWA',
+        description: 'My awesome Progressive Web App!',
+        start_url: 'mini-project-progwebapp.herokuapp.com',
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
-          },
-        ],
+            src: path.resolve('./src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+          }, ]
       }),
       new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: './src-sw.js',
       }), 
     ],
 
@@ -58,19 +52,18 @@ module.exports = () => {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
-        {
-          test: /\.m?js$/,
-          exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
-            },
-          },
-        },
-      ],
+      // {
+      //   test: /\.m?js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env'],
+      //       plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+      //     },
+      //   },
+      // },
+      ]
     }
   };
 };
