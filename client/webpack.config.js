@@ -13,7 +13,6 @@ module.exports = () => {
       install: './src/js/install.js',
       cards: './src/js/cards.js'
     },
-    // TODO: Add the correct output
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
@@ -31,7 +30,7 @@ module.exports = () => {
         short_name: 'MyPWA',
         description: 'My awesome Progressive Web App!',
         start_url: 'mini-project-progwebapp.herokuapp.com/client/dist',
-        publicPath: './',
+        publicPath: 'mini-project-progwebapp.herokuapp.com/client/dist',
         icons: [
           {
             src: path.resolve('./src/images/logo.png'),
