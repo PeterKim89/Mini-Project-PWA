@@ -9,9 +9,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "idb": "^7.1.1",
-    "webpack-pwa-manifest": "^4.3.0"
-  },
-  "devDependencies": {
+    "webpack-pwa-manifest": "^4.3.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "babel-loader": "^8.2.3",
