@@ -25,7 +25,6 @@ module.exports = () => {
         title: 'Cards'
       }),
       new WebpackPwaManifest({
-        // TODO: Create a manifest.json:
         name: 'wtf',
         short_name: 'MyPWA',
         description: 'My awesome Progressive Web App!',
