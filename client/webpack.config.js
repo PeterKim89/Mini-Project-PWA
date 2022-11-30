@@ -18,7 +18,6 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
 
-    // TODO: Add the correct plugins
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
