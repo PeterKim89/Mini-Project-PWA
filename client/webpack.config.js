@@ -29,8 +29,8 @@ module.exports = () => {
         name: 'wtf',
         short_name: 'MyPWA',
         description: 'My awesome Progressive Web App!',
-        start_url: 'mini-project-progwebapp.herokuapp.com/client/dist',
-        publicPath: 'mini-project-progwebapp.herokuapp.com/client/dist',
+        start_url: 'mini-project-progwebapp.herokuapp.com',
+        publicPath: 'mini-project-progwebapp.herokuapp.com',
         icons: [
           {
             src: path.resolve('./src/images/logo.png'),
