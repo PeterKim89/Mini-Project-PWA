@@ -24,9 +24,13 @@ module.exports = () => {
         title: 'Cards'
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'wtf',
         short_name: 'MyPWA',
         description: 'My awesome Progressive Web App!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
         icons: [
@@ -38,7 +42,7 @@ module.exports = () => {
       new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: './src-sw.js',
+        swDest: 'src-sw.js',
       }), 
     ],
 
